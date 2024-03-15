@@ -33,7 +33,7 @@ namespace UKD_OOP_StrategyPattern
     {
         public int CalculateArea(int lenght, int wight)
         {
-            int area = Convert.ToInt32(Math.PI * Math.Pow(Decimal.ToDouble(lenght), 2));
+            int area = Convert.ToInt32(Math.PI * Math.Pow(Decimal.ToDouble(lenght / 2), 2));
             return area;
         }
     }

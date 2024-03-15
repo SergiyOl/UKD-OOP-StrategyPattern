@@ -14,13 +14,14 @@ namespace UKD_OOP_StrategyPattern
 
     class BedroomType : IRoomType
     {
+        static Random rnd = new Random();
         public int CalculateWaterUsage()
         {
             return 0;
         }
         public int CalculateGasUsage()
         {
-            return 0;
+            return rnd.Next(2, 5);
         }
     }
 
@@ -46,7 +47,7 @@ namespace UKD_OOP_StrategyPattern
         }
         public int CalculateGasUsage()
         {
-            return 0;
+            return rnd.Next(2, 5);
         }
     }
 }

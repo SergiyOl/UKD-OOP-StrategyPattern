@@ -8,8 +8,8 @@ namespace UKD_OOP_StrategyPattern
 {
     class Room
     {
-        private IRoomForm roomForm;
-        private IRoomType roomType;
+        public IRoomForm roomForm;
+        public IRoomType roomType;
         public int lenght;
         public int wight;
 
