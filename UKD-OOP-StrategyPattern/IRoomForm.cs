@@ -13,8 +13,6 @@ namespace UKD_OOP_StrategyPattern
 
     class RectangleForm : IRoomForm
     {
-        public string form = "Rectangle";
-
         public int CalculateArea(int lenght, int wight)
         {
             int area = lenght * wight;
@@ -24,8 +22,6 @@ namespace UKD_OOP_StrategyPattern
 
     class TriangleForm : IRoomForm
     {
-        public string form = "Triangle";
-
         public int CalculateArea(int lenght, int wight)
         {
             int area = lenght * (wight / 2);
@@ -35,8 +31,6 @@ namespace UKD_OOP_StrategyPattern
 
     class CircleForm : IRoomForm
     {
-        public string form = "Circle";
-
         public int CalculateArea(int lenght, int wight)
         {
             int area = Convert.ToInt32(Math.PI * Math.Pow(Decimal.ToDouble(lenght), 2));

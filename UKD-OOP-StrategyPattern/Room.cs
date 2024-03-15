@@ -8,8 +8,8 @@ namespace UKD_OOP_StrategyPattern
 {
     class Room
     {
-        public IRoomForm roomForm;
-        public IRoomType roomType;
+        private IRoomForm roomForm;
+        private IRoomType roomType;
         public int lenght;
         public int wight;
 
@@ -24,6 +24,16 @@ namespace UKD_OOP_StrategyPattern
         public int CalculateArea()
         {
             return roomForm.CalculateArea(lenght, wight);
+        }
+
+        public int CalculateWaterUsage()
+        {
+            return roomType.CalculateWaterUsage();
+        }
+
+        public int CalculateGasUsage()
+        {
+            return roomType.CalculateGasUsage();
         }
     }
 }

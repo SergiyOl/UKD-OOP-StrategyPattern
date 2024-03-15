@@ -8,44 +8,45 @@ namespace UKD_OOP_StrategyPattern
 {
     interface IRoomType
     {
-        
+        int CalculateWaterUsage();
+        int CalculateGasUsage();
     }
 
     class BedroomType : IRoomType
     {
-        public string type;
-
-        public BedroomType()
+        public int CalculateWaterUsage()
         {
-            type = "Bedroom";
+            return 0;
+        }
+        public int CalculateGasUsage()
+        {
+            return 0;
         }
     }
 
     class KitchenType : IRoomType
     {
         static Random rnd = new Random();
-        public string type;
-        public int waterUsage;
-        public int gasUsage;
-
-        public KitchenType()
+        public int CalculateWaterUsage()
         {
-            type = "Kitchen";
-            waterUsage = rnd.Next(10, 50);
-            gasUsage = rnd.Next(15, 60);
+            return rnd.Next(5, 15);
+        }
+        public int CalculateGasUsage()
+        {
+            return rnd.Next(10, 25);
         }
     }
 
     class BathroomType : IRoomType
     {
         static Random rnd = new Random();
-        public string type;
-        public int waterUsage;
-
-        public BathroomType()
+        public int CalculateWaterUsage()
         {
-            type = "Bathroom";
-            waterUsage = rnd.Next(15, 60);
+            return rnd.Next(20, 35);
+        }
+        public int CalculateGasUsage()
+        {
+            return 0;
         }
     }
 }
