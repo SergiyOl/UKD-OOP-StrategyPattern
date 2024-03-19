@@ -44,7 +44,14 @@ namespace UKD_OOP_StrategyPattern
             {
                 Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                 Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
+                if (item.roomForm is CircleForm)
+                {
+                    Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}): {item.CalculateArea()}");
+                }
+                else
+                {
+                    Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}, {item.GetParameters()[1]}): {item.CalculateArea()}");
+                }
                 Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                 Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
             }
@@ -58,7 +65,14 @@ namespace UKD_OOP_StrategyPattern
                 {
                     Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                     Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                    Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
+                    if (item.roomForm is CircleForm)
+                    {
+                        Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}): {item.CalculateArea()}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}, {item.GetParameters()[1]}): {item.CalculateArea()}");
+                    }
                     Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                     Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
                 }
@@ -73,7 +87,14 @@ namespace UKD_OOP_StrategyPattern
                 {
                     Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                     Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                    Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
+                    if (item.roomForm is CircleForm)
+                    {
+                        Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}): {item.CalculateArea()}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Площа кімтани ({item.GetParameters()[0]}, {item.GetParameters()[1]}): {item.CalculateArea()}");
+                    }
                     Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                     Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
                 }

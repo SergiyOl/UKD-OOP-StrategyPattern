@@ -16,14 +16,9 @@ namespace UKD_OOP_StrategyPattern
             roomForm = _roomForm;
             roomType = _roomType;
         }
-        public int GetLenght()
+        public int[] GetParameters()
         {
-            return roomForm.GetLenght();
-        }
-
-        public int GetWight()
-        {
-            return roomForm.GetWight();
+            return roomForm.GetParameters();
         }
 
         public int CalculateArea()

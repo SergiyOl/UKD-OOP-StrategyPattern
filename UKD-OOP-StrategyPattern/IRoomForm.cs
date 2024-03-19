@@ -9,8 +9,7 @@ namespace UKD_OOP_StrategyPattern
     interface IRoomForm
     {
         int CalculateArea();
-        int GetLenght();
-        int GetWight();
+        int[] GetParameters();
     }
 
     public class RectangleForm : IRoomForm
@@ -30,14 +29,12 @@ namespace UKD_OOP_StrategyPattern
             return area;
         }
 
-        public int GetLenght()
+        public int[] GetParameters()
         {
-            return lenght;
-        }
-
-        public int GetWight()
-        {
-            return wight;
+            int[] output = new int[2];
+            output[0] = lenght;
+            output[1] = wight;
+            return output;
         }
     }
 
@@ -58,14 +55,12 @@ namespace UKD_OOP_StrategyPattern
             return area;
         }
 
-        public int GetLenght()
+        public int[] GetParameters()
         {
-            return lenght;
-        }
-
-        public int GetWight()
-        {
-            return wight;
+            int[] output = new int[2];
+            output[0] = lenght;
+            output[1] = wight;
+            return output;
         }
     }
 
@@ -84,14 +79,11 @@ namespace UKD_OOP_StrategyPattern
             return area;
         }
 
-        public int GetLenght()
+        public int[] GetParameters()
         {
-            return lenght;
-        }
-
-        public int GetWight()
-        {
-            return 0;
+            int[] output = new int[2];
+            output[0] = lenght;
+            return output;
         }
     }
 }
