@@ -10,20 +10,25 @@ namespace UKD_OOP_StrategyPattern
     {
         public IRoomForm roomForm;
         public IRoomType roomType;
-        public int lenght;
-        public int wight;
 
-        public Room(IRoomForm _roomForm, IRoomType _roomType, int _lenght, int _wight)
+        public Room(IRoomForm _roomForm, IRoomType _roomType)
         {
             roomForm = _roomForm;
             roomType = _roomType;
-            lenght = _lenght;
-            wight = _wight;
+        }
+        public int GetLenght()
+        {
+            return roomForm.GetLenght();
+        }
+
+        public int GetWight()
+        {
+            return roomForm.GetWight();
         }
 
         public int CalculateArea()
         {
-            return roomForm.CalculateArea(lenght, wight);
+            return roomForm.CalculateArea();
         }
 
         public int CalculateWaterUsage()

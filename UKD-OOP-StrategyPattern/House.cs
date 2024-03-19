@@ -10,9 +10,9 @@ namespace UKD_OOP_StrategyPattern
     {
         public List<Room> allRooms = new();
 
-        public void AddRoom(IRoomForm roomForm, IRoomType roomType, int lenght, int wight)
+        public void AddRoom(IRoomForm roomForm, IRoomType roomType)
         {
-            allRooms.Add(new Room(roomForm, roomType, lenght, wight));
+            allRooms.Add(new Room(roomForm, roomType));
         }
 
         public int CalculateHouseArea()
@@ -44,7 +44,7 @@ namespace UKD_OOP_StrategyPattern
             {
                 Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                 Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                Console.WriteLine($"Площа кімтани ({item.lenght}, {item.wight}): {item.CalculateArea()}");
+                Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
                 Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                 Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
             }
@@ -58,7 +58,7 @@ namespace UKD_OOP_StrategyPattern
                 {
                     Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                     Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                    Console.WriteLine($"Площа кімтани ({item.lenght}, {item.wight}): {item.CalculateArea()}");
+                    Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
                     Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                     Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
                 }
@@ -73,7 +73,7 @@ namespace UKD_OOP_StrategyPattern
                 {
                     Console.WriteLine($"Тип кімнати: {item.roomType.GetType()}");
                     Console.WriteLine($"Форма кімнати: {item.roomForm.GetType()}");
-                    Console.WriteLine($"Площа кімтани ({item.lenght}, {item.wight}): {item.CalculateArea()}");
+                    Console.WriteLine($"Площа кімтани ({item.GetLenght()}, {item.GetWight()}): {item.CalculateArea()}");
                     Console.WriteLine($"Використання води: {item.CalculateWaterUsage()}");
                     Console.WriteLine($"Використання газу: {item.CalculateGasUsage()}");
                 }

@@ -11,13 +11,13 @@ namespace UKD_OOP_StrategyPattern
         static void Main(string[] args)
         {
             House myHouse = new();
-            myHouse.AddRoom(new RectangleForm(), new BathroomType(), 20, 30);
+            myHouse.AddRoom(new RectangleForm(20, 30), new BathroomType());
             Console.WriteLine(myHouse.allRooms.First());
             Console.WriteLine(myHouse.allRooms.First().CalculateArea());
             Console.WriteLine(myHouse.allRooms.First().CalculateWaterUsage());
             Console.WriteLine(myHouse.allRooms.First().CalculateGasUsage());
-            myHouse.AddRoom(new CircleForm(), new BedroomType(), 20, 20);
-            myHouse.AddRoom(new TriangleForm(), new KitchenType(), 20, 30);
+            myHouse.AddRoom(new CircleForm(20), new BedroomType());
+            myHouse.AddRoom(new TriangleForm(20, 30), new KitchenType());
 
             Console.WriteLine();
             Console.WriteLine(myHouse.CalculateHouseArea());
